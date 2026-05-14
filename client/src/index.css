@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-pink: #E91E63;
+  --color-deep-pink: #C2185B;
+  --color-royal-purple: #6C4AB6;
+  --color-deep-purple: #52339A;
+  --color-gold: #D4AF37;
+  --color-soft-cream: #FFFBFB;
+  --color-dark-text: #0F172A;
+  
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background: linear-gradient(to top right, #52339a, #6C4AB6);
+  }
+}
+
+:root {
+  --primary-pink: #E91E63;
+  --royal-purple: #6C4AB6;
+  --gold: #D4AF37;
+  --soft-cream: #FFFBFB;
+  --dark-text: #0F172A;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark-text);
+  background-color: var(--soft-cream);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.btn-purple {
+  background-color: var(--royal-purple);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.btn-purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(108, 74, 182, 0.3);
+}
